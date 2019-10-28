@@ -28,7 +28,7 @@ function addValueToList(element){
               </div>
               <div class="mdc-card__action-icons">
                 <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites">
-                  <i class="material-icons mdc-icon-button__icon">edit</i>
+                  <i class="material-icons edit-button mdc-icon-button__icon">edit</i>
                 </button>
                 <button class="delete-button mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">delete</button>
               </div>
@@ -127,6 +127,20 @@ function deletePost() {
   });
 }
 
+function updatePost() {
+  $("editPostBtn").on("click", function(event) {
+    alert("EditClicked")
+  });
+}
+
+function showUpdateDialog() {
+  $("ul").on("click", ".edit-button", function(event) {
+    event.preventDefault();
+    const dialog = new MDCDialog(document.querySelector(".mdc-dialog---editable"));
+    dialog.open();
+  });
+}
+
 function dialogShow() {
   $("#dialogButton").on("click", function(event) {
     event.preventDefault();
@@ -135,7 +149,10 @@ function dialogShow() {
   });
 }
 
+
+updatePost();
 deletePost();
 addPost();
 dialogShow();
+showUpdateDialog();
 postList();
