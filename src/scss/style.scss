@@ -1,0 +1,75 @@
+@import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/list/mdc-list";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/card/mdc-card";
+@import "@material/list/mdc-list";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/typography/mdc-typography";
+@import "@material/fab/mdc-fab";
+@import "@material/textfield/mdc-text-field";
+@import "@material/textfield/icon/mdc-text-field-icon";
+@import "@material/dialog/mdc-dialog";
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/snackbar/mdc-snackbar";
+@import "variables";
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+  .app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+@media (max-width: $mdc-snackbar-mobile-breakpoint) {
+  .my-snackbar {
+    @include mdc-snackbar-layout-stacked;
+  }
+}
+@media (min-width: $mdc-snackbar-mobile-breakpoint) {
+  .my-snackbar {
+    @include mdc-snackbar-position-leading;
+  }
+
+}
+
+#my-dialog-title{
+  list-style-type: none; 
+}
+
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.author {
+  width:440px;
+  margin: 20px auto;
+}
+.title{
+  display: block;
+  width: 440px;
+  margin: 20px auto;
+}
+.card-id{
+  position: absolute;
+  font-size: 6px;
+  margin: 4px 16px;
+  padding: 0;
+  text-align: end;
+}
+.first-title{
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+.first-subtitle{
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
