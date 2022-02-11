@@ -45,7 +45,7 @@
     "material-components-web": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "morgan": "^1.9.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
